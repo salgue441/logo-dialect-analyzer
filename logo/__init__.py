@@ -1,31 +1,14 @@
 """
-Module for lexical and syntactic analysis of the Logo dialect.
+Logo Compiler Package.
 
-This module provides the necessary classes to perform
-lexical and syntactic analysis of the Logo dialect.
+A modular compiler for the Logo dialect with lexical analysis, syntax parsing,
+and semantic analysis components.
 """
 
-from .logo_tokens import Token, Tag
-from .logo_errors import (
-    LexerError,
-    SyntaxError,
-    SemanticError,
-    CodeGenerationError,
-    FileError,
-    CompilerError,
-)
-from .logo_lexer import Lexer
-
-__all__ = [
-    "Token",
-    "Tag",
-    "Lexer",
-    "LexerError",
-    "SyntaxError",
-    "SemanticError",
-    "CodeGenerationError",
-    "FileError",
-    "CompilerError",
-]
-
 __version__ = "1.0.0"
+__author__ = "Logo Compiler Team"
+
+from logo.lexical.lexer import Lexer
+from logo.utils.error import CompilerError, LexerError, FileError
+
+__all__ = ["Lexer", "CompilerError", "LexerError", "FileError"]

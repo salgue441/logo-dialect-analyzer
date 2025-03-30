@@ -1,0 +1,11 @@
+# Core dependencies for the Logo compiler
+typing-extensions>=4.0.0
+pytest>=7.0.0
+pytest-cov>=4.0.0
+colorama>=0.4.4
+argparse>=1.4.0
+
+# Optional dependencies for enhanced features
+rich>=12.0.0             # For rich terminal output
+jsonschema>=4.0.0        # For JSON schema validation
+memory-profiler>=0.60.0  # For memory profiling (development only)
