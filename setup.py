@@ -13,9 +13,9 @@ setup(
     description="A modern compiler for the Logo dialect",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author="Logo Compiler Team",
-    author_email="contact@example.com",
-    url="https://github.com/username/logo-compiler",
+    author="Carlos Salguero",
+    author_email="A00833341@example.com",
+    url="https://github.com/salgue441/logo-compiler",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 3 - Alpha",
