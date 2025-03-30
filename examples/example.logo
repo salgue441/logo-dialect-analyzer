@@ -1,0 +1,133 @@
+% Advanced example to test all features of the Logo lexer
+% This program demonstrates various geometric shapes and calculations
+
+% Variable declarations
+VAR side, radius, x, y, angle, i, area, perimeter
+VAR color_r, color_g, color_b, thickness, figure, temp
+
+% Initialize variables
+side := 100
+radius := 50
+x := 0
+y := 0
+angle := 0
+i := 0
+thickness := 2
+color_r := 255
+color_g := 0
+color_b := 0
+
+% Clear screen and setup pen
+CLEAR()
+PENWIDTH(thickness)
+COLOR(color_r, color_g, color_b)
+PENDOWN()
+
+% Draw a square using a loop
+PRINT("Drawing a square with side length: ", side)
+WHILE (i < 4) [
+    FORWARD(side)
+    RIGHT(90)
+    i := i + 1
+]
+
+% Calculate and display area and perimeter of the square
+area := side * side
+perimeter := 4 * side
+PRINT("Square area: ", area)
+PRINT("Square perimeter: ", perimeter)
+
+% Move to another position
+PENUP()
+SETX(150)
+SETY(150)
+PENDOWN()
+
+% Change color
+color_r := 0
+color_g := 0
+color_b := 255
+COLOR(color_r, color_g, color_b)
+
+% Draw a circle
+PRINT("Drawing a circle with radius: ", radius)
+CIRCLE(radius)
+
+% Calculate and display area and circumference of the circle
+area := 3.14159 * radius * radius
+perimeter := 2 * 3.14159 * radius
+PRINT("Circle area: ", area)
+PRINT("Circle circumference: ", perimeter)
+
+% Test comparison operators
+IF (side > radius) [
+    PRINT("The square side is greater than the circle radius")
+]
+
+IF (area >= 10000) [
+    PRINT("The area is greater than or equal to 10000")
+]
+
+IF (perimeter <= 1000) [
+    PRINT("The perimeter is less than or equal to 1000")
+]
+
+IF (side <> radius) [
+    PRINT("The side and radius are different")
+]
+
+% Test logical operators
+IFELSE (side > 50 AND radius > 30) [
+    PRINT("Both conditions are true")
+] [
+    PRINT("At least one condition is false")
+]
+
+IFELSE (side < 50 OR radius > 30) [
+    PRINT("At least one condition is true")
+] [
+    PRINT("Both conditions are false")
+]
+
+% Test MOD operator
+i := 10
+temp := i MOD 3
+PRINT("10 MOD 3 = ", temp)
+
+% Test operations with decimal numbers
+x := 123.456
+y := 78.9
+temp := x + y
+PRINT("123.456 + 78.9 = ", temp)
+
+temp := x - y
+PRINT("123.456 - 78.9 = ", temp)
+
+temp := x * y
+PRINT("123.456 * 78.9 = ", temp)
+
+temp := x / y
+PRINT("123.456 / 78.9 = ", temp)
+
+% Test complex expressions
+temp := (side + radius) * 2 / (1 + 0.5) - (x MOD y)
+PRINT("Result of complex expression: ", temp)
+
+% Test boolean values
+IFELSE (#t) [
+    PRINT("True condition")
+] [
+    PRINT("False condition")
+]
+
+IFELSE (#f) [
+    PRINT("True condition")
+] [
+    PRINT("False condition")
+]
+
+% Return to initial position
+HOME
+
+% End of program
+PRINT("Program finished")
